@@ -15,34 +15,43 @@
         </div>
         <ul>
             <li>
-                <a>Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
                 <a href= "entries.html">Entries</a>
             </li>
             <li>
-                <a >Thoughts</a>
+                <a>Thoughts</a>
             </li>
         </ul>
     </nav>
-    <h2>How are you feeling at the moment?</h2>
-        <ul class="moodlist">
-            <li class="moodbtn">
-                <checkbox> <i class="fa-solid fa-face-laugh-beam"></i> </checkbox>
-            </li>
-            <li class="moodbtn">
-                <button> <i class="fa-solid fa-face-smile"></i> </button>
-            </li>
-            <li class="moodbtn">
-                <button> <i class="fa-solid fa-face-meh"></i> </button>
-            </li>
-            <li class="moodbtn">
-                <button> <i class="fa-solid fa-face-frown"></i> </button>
-            </li>
-            <li class="moodbtn">
-                <button><i class="fa-solid fa-face-sad-cry"></i> </button>
-            </li>
-        </ul>
+    <form name="moodForm">
+        <script src="mood.js"></script>
+        <h4>
+            How are you feeling today?
+        </h4>
+        <div>
+            <label for="moodChoice1"><i class="fa-solid fa-face-laugh-beam"></i></label>
+                <input type="radio" id="moodChoice1" name="mood" value="excited" > <br>
+    
+            <label for="moodChoice2"><i class="fa-solid fa-face-smile"></i> </label>
+                <input type="radio" id="moodChoice2" name="mood" value="happy" > <br>
+    
+            <label for="moodChoice3"><i class="fa-solid fa-face-meh"></i></label>
+                <input type="radio" id="moodChoice3" name="mood" value="neutral" checked> <br>
+    
+            <label for="moodChoice4"><i class="fa-solid fa-face-frown"></i></label>
+                <input type="radio" id="moodChoice4" name="mood" value="sad" > <br>
+    
+            <label for="moodChoice5"><i class="fa-solid fa-face-sad-cry"></i> </label>
+                <input type="radio" id="moodChoice5" name="mood" value="cry" > <br> <br>
+    
+        <button type="button" onclick="displayRadioValue()">submit my mood!</button> 
+    
+        <div id="moodResult"></div>
+    
+        </div>
+
 
 </body>
 </html>

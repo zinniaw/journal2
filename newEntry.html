@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/eaa41e1b49.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <nav>
@@ -15,20 +16,25 @@
         </div>
         <ul>
             <li>
-                <a>Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
-                <a href= "entries.html">Entries</a>
+                <a href= "newEntry.html">Entries</a>
             </li>
             <li>
                 <a >Thoughts</a>
             </li>
         </ul>
     </nav>
-    <h1> Create a new Journal Entry</h1>
+    <h4> It's been a long day, and it's time for some well-deserved rest. Ready to reflect?</h4>
 
-<button>
-    New Entry
+<button type="button" id= "nextButton">
+    Let's get to it!
 </button>
+<script>
+    document.getElementById("nextButton").onclick = function() {
+            location.href= "mood.html";
+        };
+</script>
 </body>
 </html>
