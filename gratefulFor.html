@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/eaa41e1b49.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Reflection</h4>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href= "entries.html">Entries</a>
+            </li>
+            <li>
+                <a>Thoughts</a>
+            </li>
+        </ul>
+    </nav>
+
+    <form name="gratefulForm">
+        <script src="mood.js"></script>
+        <h4>
+            What are 3 things you're grateful for?
+        </h4>
+
+        <label for="grateful1"></label>
+        <input type="text" id="grateful1" name="grateful">
+
+        <label for="grateful2"></label>
+        <input type="text" id="grateful2" name="grateful">
+
+        <label for="grateful3"></label>
+        <input type="text" id="grateful3" name="grateful">
+
+    <button type="button" onclick ="storeGrateful()">show me what i'm grateful for!</button> <!--test-->
+
+    <div id="gratefulResult"> </div>
+
+    </form>
+
+
+
+</body>
+</html>
