@@ -27,7 +27,12 @@
         </ul>
     </nav> <!--end of nav bar-->
 
-    <form name="newEntryForm" >
+    <form name="newEntryForm" > <br> <br>
+
+        <form name="entryDateForm">
+            <label for="entryDate">Today's Date:</label>
+                <input type="date" id="entryDate"> <br>
+        </form>
 
         <form name="moodForm"> <!-- mood form-->
             <script src="mood.js"></script>
@@ -71,7 +76,20 @@
 
         </form> <br> <br>
 
-        
+        <form name="smileForm">
+            <h4> What's one thing that made you smile today? </h4>
+
+            <label for="smile"></label>
+                <input type="text" id="smile">
+        </form> <br> <br>
+
+        <form name="accomplishForm">
+            <h4> What's one thing that you want to accomplish tomorrow? </h4>
+            <p> (this can be big or small!) </p>
+
+            <label for="accomplish"></label>
+                <input type="text" id="accomplish">
+        </form> <br> <br>
 
         <button name="submitNewEntry" type="submit" onclick="storeEntryInfo()"> process my thoughts!</button>
 
