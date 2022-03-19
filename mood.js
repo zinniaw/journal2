@@ -6,6 +6,12 @@ function storeDate() {
     console.log(date);
 }
 
+let userName = ""; // stores the user's name (for results page)
+function storeName() {
+    userName = document.getElementById('name').value;
+    console.log(userName);
+}
+
 let moodResult = "";
 function storeMood() {
     let moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'

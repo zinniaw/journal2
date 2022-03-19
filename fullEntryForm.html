@@ -34,6 +34,13 @@
                 <input type="date" id="entryDate"> <br>
         </form>
 
+        <form name="nameForm">
+            <h5> Let's start with your name! </h5>
+
+            <label for="name"></label>
+                <input type="text" id="name">
+        </form> <br> <br>
+
         <form name="moodForm"> <!-- mood form-->
             <script src="mood.js"></script>
             <h4>
@@ -97,7 +104,7 @@
                 <input type="text" id="accomplish">
         </form> <br> <br>
 
-        <button name="submitNewEntry" type="submit" onclick="storeEntryInfo()"> process my thoughts!</button>
+        <button name="submitNewEntry" type="submit" onclick="storeEntryInfo(); window.location.href='results.html'"> process my thoughts!</button>
 
     </form>
 
