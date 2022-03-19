@@ -3,8 +3,8 @@ function storeMood() { //don't need the button 'submit mood' immediatly after th
 
     for (i = 0; i < moodList.length; i++) {
         if (moodList[i].checked)
-        var moodResult = moodList[i].value; // stores their response in moodResult
-        console.log(moodResult); // to test
+            var moodResult = moodList[i].value; // stores their response in moodResult
+            console.log(moodResult); // to test
         
     }
 }
@@ -32,13 +32,23 @@ function storeGrateful() {
     const gratefulArray = [];
     var gratefulInput = document.getElementsByName("grateful");
     for (i = 0; i < gratefulInput.length; i++) {
-        gratefulArray.push(gratefulInput[i].value); // [grateful1,grateful2,grateful3]
+        gratefulArray.push(gratefulInput[i].value); // stores result in gratefulArray: [grateful1,grateful2,grateful3]
     };
 
     console.log(gratefulArray); // can access gratefulArray later, 3 inputs will be stored starting from gratefulArray[0]
-    document.getElementById("gratefulResult").innerHTML = gratefulArray.toString(); // replaces gratefulResult in HTML file
+    // document.getElementById("gratefulResult").innerHTML = gratefulArray.toString(); // replaces gratefulResult in HTML file
+}
+
+function storeEntryInfo() { // stores all info from entry form, calls each function
+    storeMood();
+    storeGrateful();
+    
 }
     
-        
+const allEntriesArray = [];
+
+function addEntry() {
+
+}
     
 
