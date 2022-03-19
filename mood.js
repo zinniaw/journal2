@@ -1,8 +1,5 @@
+let date = document.getElementById('entryDate').value; // stored in date
 
-function storeDate() {
-    var date = document.getElementById('entryDate').value;
-    console.log(date);
-}
 
 function storeMood() { //don't need the button 'submit mood' immediatly after the radio buttons, we can instead call all the functions to collect their data at the click of one button at the end of the page
     var moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
@@ -13,6 +10,11 @@ function storeMood() { //don't need the button 'submit mood' immediatly after th
             console.log(moodResult); // to test
         
     }
+}
+
+function storeOneSentence() {
+    var oneSentInput = document.getElementById('oneSent').value;
+    console.log(oneSentInput);
 }
 
 function displayMood() { // don't need this, only once we want to display (the last line)
@@ -33,9 +35,8 @@ function testGrateful() { // don't need this anymore
     document.getElementById("gratefulResult").innerHTML = gratefulArr.toString(); 
 }
 
-
+let gratefulArray = [];
 function storeGrateful() { 
-    const gratefulArray = [];
     var gratefulInput = document.getElementsByName("grateful");
     for (i = 0; i < gratefulInput.length; i++) {
         gratefulArray.push(gratefulInput[i].value); // stores result in gratefulArray: [grateful1,grateful2,grateful3]
@@ -58,6 +59,7 @@ function storeAccomplish() {
 function storeEntryInfo() { // stores all info from entry form, calls each function
     storeDate();
     storeMood();
+    storeOneSentence();
     storeGrateful();
     storeSmile();
     storeAccomplish();
