@@ -42,8 +42,13 @@ function storeGrateful() {
 function storeEntryInfo() { // stores all info from entry form, calls each function
     storeMood();
     storeGrateful();
+    
 }
     
-        
+const allEntriesArray = [];
+
+function addEntry() {
+
+}
     
 
