@@ -1,19 +1,25 @@
-let date = document.getElementById('entryDate').value; // stored in date
 
 
-function storeMood() { //don't need the button 'submit mood' immediatly after the radio buttons, we can instead call all the functions to collect their data at the click of one button at the end of the page
-    var moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
+let date = "";
+function storeDate() {
+    date = document.getElementById('entryDate').value; // stored in date (prints 2022-03-23)
+    console.log(date);
+}
 
+let moodResult = "";
+function storeMood() {
+    let moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
     for (i = 0; i < moodList.length; i++) {
         if (moodList[i].checked)
-            var moodResult = moodList[i].value; // stores their response in moodResult
+            moodResult = moodList[i].value; // stores their response in moodResult
             console.log(moodResult); // to test
-        
+            
     }
 }
 
+let oneSentInput = "";
 function storeOneSentence() {
-    var oneSentInput = document.getElementById('oneSent').value;
+    oneSentInput = document.getElementById('oneSent').value;
     console.log(oneSentInput);
 }
 
@@ -27,6 +33,7 @@ function displayMood() { // don't need this, only once we want to display (the l
     document.getElementById("moodResult").innerHTML = moodResult; // prints out moodResult by replacing <div id="moodResult"></div>
 }
 }
+
 function testGrateful() { // don't need this anymore
     const gratefulArr = [];
     var answers = document.getElementsByName("grateful").value;
@@ -46,13 +53,15 @@ function storeGrateful() {
     // document.getElementById("gratefulResult").innerHTML = gratefulArray.toString(); // replaces gratefulResult in HTML file
 }
 
+let smileInput = "";
 function storeSmile() {
-    var smileInput = document.getElementById('smile').value;
+    smileInput = document.getElementById('smile').value;
     console.log(smileInput);
 }
 
+let accomplishInput = "";
 function storeAccomplish() {
-    var accomplishInput = document.getElementById('accomplish').value;
+    accomplishInput = document.getElementById('accomplish').value;
     console.log(accomplishInput);
 }
 
@@ -63,7 +72,6 @@ function storeEntryInfo() { // stores all info from entry form, calls each funct
     storeGrateful();
     storeSmile();
     storeAccomplish();
-    
 }
     
     
