@@ -9,6 +9,17 @@ nav {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+}
+
+h4 {
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
 
 .header {
@@ -50,6 +61,32 @@ a:hover {
     color: white;
 }
 
+.columnA {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.columnB {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
 .moodbtn {
     color: black;
     columns: 6;
@@ -64,4 +101,24 @@ a:hover {
     position: relative;
     text-align: center;
     
+}
+
+.processButton {
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color:#b4cbfd;
+    color: black;
+}
+
+.background {
+    background-image: url("background.gif.jpg");
+    background-repeat: no-repeat;
+    background-size: 450px, 400px;
+    background-position: center
+
+
 }

@@ -20,7 +20,7 @@
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a href= "entries.html">New Entry</a>
+                <a href= "newEntry.html">New Entry</a>
             </li>
             <li>
                 <a>All Entries</a>
@@ -28,21 +28,21 @@
         </ul>
     </nav> <!--end of nav bar-->
 
-    <form name="newEntryForm" > <br> <br>
+    <form name="newEntryForm" class="question"> <br> <br>
 
-        <form name="entryDateForm">
+        <form name="entryDateForm" class="question">
             <label for="entryDate">Today's Date:</label>
                 <input type="date" id="entryDate" > <br>
         </form>
 
-        <form name="nameForm">
+        <form name="nameForm" class="question">
             <h5> Let's start with your name! </h5>
 
             <label for="name"></label>
                 <input type="text" id="name" >
         </form> <br> <br>
 
-        <form name="moodForm"> <!-- mood form-->
+        <form name="moodForm" class="question"> <!-- mood form-->
             <script src="mood.js"></script>
             <h4>
                 How are you feeling today?
@@ -66,14 +66,14 @@
             </div>
 
             <div>
-                <h6> One Sentence to Describe Your Day: </h6>
+                <h4> One Sentence to Describe Your Day: </h4>
                 <label for="oneSent"></label>
                 <input type="text" id="oneSent">
             </div>
 
         </form>
 
-        <form name="gratefulForm"> <!-- grateful form-->
+        <form name="gratefulForm" class="question"> <!-- grateful form-->
             <script src="mood.js"></script>
             <h4>
                 What are 3 things you're grateful for?
@@ -90,14 +90,14 @@
 
         </form> <br> <br>
 
-        <form name="smileForm">
+        <form name="smileForm" class="question">
             <h4> What's one thing that made you smile today? </h4>
 
             <label for="smile"></label>
                 <input type="text" id="smile">
         </form> <br> <br>
 
-        <form name="accomplishForm">
+        <form name="accomplishForm" class="question">
             <h4> What's one thing that you want to accomplish tomorrow? </h4>
             <p> (this can be big or small!) </p>
 
@@ -105,7 +105,7 @@
                 <input type="text" id="accomplish">
         </form> <br> <br>
 
-        <button name="submitNewEntry" type="submit" onclick="storeEntryInfo(); window.location.href='results.html'"> process my thoughts!</button>
+        <button class="processButton" name="submitNewEntry" type="submit" onclick="storeEntryInfo(); window.location.href='results.html'"> process my thoughts!</button>
 
     </form>
 
