@@ -50,3 +50,8 @@ a:hover {
     text-align: center;
     
 }
+
+body {
+    color: black;
+    font-size: 12px;
+}

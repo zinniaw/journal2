@@ -1,44 +1,66 @@
-
-
-let date = "";
+var dateInput = "";
 function storeDate() {
-    date = document.getElementById('entryDate').value; // stored in date (prints 2022-03-23)
-    console.log(date);
+    dateInput = document.getElementById('entryDate').value; // stored in date (prints 2022-03-23)
+    console.log(dateInput);
 }
 
-let userName = ""; // stores the user's name (for results page)
+var userName = ""; // stores the user's name (for results page)
 function storeName() {
-    userName = document.getElementById('name').value;
+    userName = document.getElementById('nameInput').value;
     console.log(userName);
 }
 
-let moodResult = "";
+var moodResult = "";
 function storeMood() {
     let moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
     for (i = 0; i < moodList.length; i++) {
         if (moodList[i].checked)
             moodResult = moodList[i].value; // stores their response in moodResult
             console.log(moodResult); // to test
+            document.getElementById("moodResult").innerHTML = moodResult;
+
             
     }
 }
 
-let oneSentInput = "";
+var oneSentInput = "";
 function storeOneSentence() {
     oneSentInput = document.getElementById('oneSent').value;
     console.log(oneSentInput);
 }
 
-function displayMood() { // don't need this, only once we want to display (the last line)
+function displayMood() {
+    var MoodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
+    for (i = 0; i < MoodList.length; i++) {
+        if (moodList[i].checked)
+            var MoodResult = MoodList[i].value; // stores their response in moodResult
+            console.log(MoodResult); // to test
+    document.getElementById('moodResult').innerHTML = MoodResult;
+}
+
+//var moodResult = "";
+//function DisplayMood() {
+   // let moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
+    //for (i = 0; i < moodList.length; i++) {
+       // if (moodList[i].checked)
+           // moodResult = moodList[i].value; // stores their response in moodResult
+           // console.log(moodResult); // to test
+           // document.getElementById("moodResult").innerHTML = moodResult;
+            
+   // }
+//}
+
+
+//function displayMood() { // don't need this, only once we want to display (the last line)
     var moodList = document.getElementsByName('mood');
 
-    for (i = 0; i < moodList.length; i++) {
-        if (moodList[i].checked)
-        var moodResult = moodList[i].value; // stores their response in moodResult
-        console.log(moodResult);
-    document.getElementById("moodResult").innerHTML = moodResult; // prints out moodResult by replacing <div id="moodResult"></div>
-}
-}
+   // for (i = 0; i < moodList.length; i++) {
+       // if (moodList[i].checked)
+        //var moodResult = moodList[i].value; // stores their response in moodResult
+        //console.log(moodResult);
+    //document.getElementById("moodResult").innerHTML = moodResult; // prints out moodResult by replacing <div id="moodResult"></div>
+//}
+//}
 
 function testGrateful() { // don't need this anymore
     const gratefulArr = [];
@@ -48,7 +70,7 @@ function testGrateful() { // don't need this anymore
     document.getElementById("gratefulResult").innerHTML = gratefulArr.toString(); 
 }
 
-let gratefulArray = [];
+var gratefulArray = [];
 function storeGrateful() { 
     var gratefulInput = document.getElementsByName("grateful");
     for (i = 0; i < gratefulInput.length; i++) {
@@ -59,13 +81,13 @@ function storeGrateful() {
     // document.getElementById("gratefulResult").innerHTML = gratefulArray.toString(); // replaces gratefulResult in HTML file
 }
 
-let smileInput = "";
+var smileInput = "";
 function storeSmile() {
     smileInput = document.getElementById('smile').value;
     console.log(smileInput);
 }
 
-let accomplishInput = "";
+var accomplishInput = "";
 function storeAccomplish() {
     accomplishInput = document.getElementById('accomplish').value;
     console.log(accomplishInput);
@@ -73,12 +95,26 @@ function storeAccomplish() {
 
 function storeEntryInfo() { // stores all info from entry form, calls each function
     storeDate();
+    storeName();
     storeMood();
     storeOneSentence();
     storeGrateful();
     storeSmile();
     storeAccomplish();
 }
-    
-    
 
+
+function printGreeting() {
+    let greeting = userName.concat("'s Reflection of the Day");
+    document.getElementById('resultsGreeting').innerHTML = greeting;
+
+
+}
+
+function insertName() {
+    document.getElementById('insName').innerHTML = userName;
+}
+
+    
+    
+}
