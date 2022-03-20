@@ -2,7 +2,7 @@
 
 let date = "";
 function storeDate() {
-    date = document.getElementById('entryDate').value; // stored in date (prints 2022-03-23)
+    var date = document.getElementById('entryDate').value; // stored in date (prints 2022-03-23)
     console.log(date);
 }
 
@@ -11,7 +11,6 @@ function storeName() {
     userName = document.getElementById('name').value;
     console.log(userName);
 }
-
 let moodResult = "";
 function storeMood() {
     let moodList = document.getElementsByName('mood'); //selects all radio btns w name 'mood'
@@ -80,5 +79,12 @@ function storeEntryInfo() { // stores all info from entry form, calls each funct
     storeAccomplish();
 }
     
+
+function endScreen() {
+    document.getElementById('pD').innerHTML = storeDate();
+    document.getElementById('pM').innerHTML = storeMood();
+    document.getElementById('pO').innerHTML = storeOneSentence();
+    document.getElementById('pG').innerHTML = storeGrateful();
+}
     
 
