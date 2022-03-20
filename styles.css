@@ -23,7 +23,7 @@ h4 {
 }
 
 .header {
-    background-color: #b4cbfd;
+    background-color: #fde6b4;
     text-align: center;
     padding: 20px;
   }
@@ -63,15 +63,13 @@ a:hover {
 
 .columnA {
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto;
     width: 50%;
 }
 
 .columnB {
     float: right;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto;
     width: 50%;
 }
 
@@ -115,10 +113,20 @@ a:hover {
 }
 
 .background {
-    background-image: url("background.gif.jpg");
+    background-color:#fde6b4;
     background-repeat: no-repeat;
-    background-size: 450px, 400px;
     background-position: center
 
+}
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+} 
+
+.end {
+    text-align: center;
+    margin-top: 100px;
 }
